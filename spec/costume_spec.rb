@@ -1,4 +1,5 @@
 require_relative 'spec_helper'
+require 'pry'
 
 describe "Costume" do
   let(:hot_dog) { Costume.create(name: "Unisex Adult Hot Dog Costume") }
@@ -30,6 +31,7 @@ describe "Costume" do
   end
 
   it "knows when it was last updated (hint: use t.timestamps in the migration)" do
+    binding.pry
     expect(hot_dog.updated_at).to be_a_kind_of(Time)
   end
 
